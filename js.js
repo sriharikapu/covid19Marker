@@ -36,17 +36,15 @@ function loadData() {
             let featureArray = data.features;
             for (let feature of featureArray) {
                 let attribute = feature.attributes;
-
                 let name = attribute.Country_Region;
                 let lat = attribute.Lat;
                 let lon = attribute.Long_;
                 let active_cases = attribute.Active;
                 let deaths = attribute.Deaths;
+                let recovered = attribute.Recovered;
                 let estimated_cases = attribute.Estimated;
                 let lastUpdated = new Date(attribute.Last_Update);
-
-                let radius = estimated_cases / 10 + 100000;
-
+                let radius = estimated_cases / 10 + 10000;
                 addCase(lat, lon, radius, name, active_cases, deaths, estimated_cases, lastUpdated);
             }
         }
@@ -54,14 +52,14 @@ function loadData() {
 
 }
 
-function addCase(lat, lon, radius, name, active_cases, deaths, estimated_cases, lastUpdated){
+function addCase(lat, lon, radius, name, active_cases, recovered, deaths, estimated_cases, lastUpdated){
 
     let circle = new H.map.Circle(
         { lat: lat, lng: lon},
         radius,
         {
             style: {
-                strokeColor: 'rgba(0, 0, 0, 0.6)',
+                strokeColor: 'rgba(220, 0, 0, 0.6)',
                 lineWidth: 2,
                 fillColor: 'rgba(221, 229, 66, 0.78)'
             }
@@ -72,8 +70,9 @@ function addCase(lat, lon, radius, name, active_cases, deaths, estimated_cases, 
     let open = false;
     let bubble = new H.ui.InfoBubble({lng: lon, lat: lat}, {
         content: "<b>" + name + "</b> " +
-            "<p>Active Cases (Confirmed): <b>" + active_cases + "</b></p>" +
-            "<p>Unreported: <b>" + estimated_cases + "</b></p>" +
+            "<p>Active Cases: <b>" + active_cases + "</b></p>" +
+            "<p>Recovered: <b>" + recovered + "</b></p>" +
+            "<p>Estimated: <b>" + estimated_cases + "</b></p>" +
             "<p>Deadths: <b>" + deaths + "</b></p>" +
             "<p>Last Updated: <b>" + lastUpdated.toLocaleString() + "</b></p>"
     });
