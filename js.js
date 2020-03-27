@@ -9,7 +9,7 @@ const map = new H.Map(
     document.getElementById('mapContainer'),
     defaultLayers.vector.normal.map,
     {
-        zoom: 1,
+        zoom: 6,
         center: {
             lat: 21.158627, lng: 78.445921
         }
