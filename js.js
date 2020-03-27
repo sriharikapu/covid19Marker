@@ -1,6 +1,6 @@
 let platform = new H.service.Platform({
     'apikey': 'let platform = new H.service.Platform({
-    'apikey': '-iwQwybhP5JNfW4MjF6Svkno2HqQ46Xxt7sJSCWCjss'
+    'apikey': '-xLAPt5eTkj9mOmGlxWijyCTZ6VBt3CFxL23WOmh-ss0'
 });
 
 let defaultLayers = platform.createDefaultLayers();
