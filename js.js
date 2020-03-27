@@ -72,10 +72,10 @@ function addCase(lat, lon, radius, name, active_cases, deaths, estimated_cases, 
     let open = false;
     let bubble = new H.ui.InfoBubble({lng: lon, lat: lat}, {
         content: "<b>" + name + "</b> " +
-            "<p>Aktive Fälle (bestätigt): <b>" + active_cases + "</b></p>" +
-            "<p>Dunkelziffer: <b>" + estimated_cases + "</b></p>" +
-            "<p>Bestätigte Tode: <b>" + deaths + "</b></p>" +
-            "<p>Zuletzt aktualisiert: <b>" + lastUpdated.toLocaleString() + "</b></p>"
+            "<p>Active Cases (Confirmed): <b>" + active_cases + "</b></p>" +
+            "<p>Unreported: <b>" + estimated_cases + "</b></p>" +
+            "<p>Deadths: <b>" + deaths + "</b></p>" +
+            "<p>Last Updated: <b>" + lastUpdated.toLocaleString() + "</b></p>"
     });
     bubble.close();
     ui.addBubble(bubble);
