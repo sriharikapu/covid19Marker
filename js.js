@@ -45,7 +45,7 @@ function loadData() {
                 let estimated_cases = attribute.Estimated;
                 let lastUpdated = new Date(attribute.Last_Update);
                 let radius = estimated_cases / 10 + 100000;
-                addCase(lat, lon, radius, name, active_cases, deaths, estimated_cases, lastUpdated);
+                addCase(lat, lon, radius, name, active_cases, recovered, deaths, estimated_cases, lastUpdated);
             }
         }
     });
