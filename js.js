@@ -31,7 +31,7 @@ function loadData() {
 
     $.ajax({
         dataType: "json",
-        url: "https://raw.githubusercontent.com/sriharikapu/covid19Marker.github.io/master/23892313data.json",
+        url: "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/sriharikapu/covid19Marker.github.io/master/23892313data.json",
         success: function(data){
             let featureArray = data.features;
             for (let feature of featureArray) {
