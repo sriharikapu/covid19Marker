@@ -63,7 +63,7 @@ function addCase(lat, lon, radius, name, active_cases, recovered, deaths, estima
             style: {
                 strokeColor: 'rgba(0, 0, 0, 0.6)',
                 lineWidth: 2,
-                fillColor: 'rgba(255, 50, 50, 0.5)'
+                fillColor: 'rgba(221, 229, 66, 0.78)'
             }
         }
     );
