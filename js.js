@@ -9,9 +9,10 @@ const map = new H.Map(
     document.getElementById('mapContainer'),
     defaultLayers.vector.normal.map,
     {
-        zoom: 6,
+        zoom: 2,
         center: {
-            lat: 21.158627, lng: 78.445921
+            //lat: 21.158627, lng: 78.445921
+            lat: 20, lng: 0
         }
     });
 map.getBaseLayer().getProvider().setStyle(new H.map.Style(
