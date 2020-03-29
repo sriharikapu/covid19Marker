@@ -30,7 +30,7 @@ function loadData() {
 
     $.ajax({
         dataType: "json",
-        url: "https://cors-anywhere.herokuapp.com/https://corona.tum.lol",
+        url: "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/sriharikapu/covid19Marker.github.io/master/newdataset.json",
         success: function(data){
             let featureArray = data.features;
             for (let feature of featureArray) {
