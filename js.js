@@ -90,3 +90,7 @@ function addCase(lat, lon, radius, name, active_cases, deaths, recovered, estima
         }
     });
 }
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+});
