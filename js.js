@@ -43,7 +43,8 @@ function loadData() {
                 let recovered = attribute.Recovered;
                 let deaths = attribute.Deaths;
                 let estimated_cases = attribute.Estimated;
-                let lastUpdated = new Date(attribute.Last_Update);
+                let lastUpdated1 = new Date(attribute.Last_Update);
+                let lastUpdated = lastUpdated1.toLocaleString();
 
                 let radius = estimated_cases / 10 + 100000;
 
@@ -76,7 +77,7 @@ function addCase(lat, lon, radius, name, active_cases, recovered, deaths, estima
             "<p>Recovered: <b>" + recovered + "</b></p>" +
             "<p>Estimated: <b>" + estimated_cases + "</b></p>" +
             "<p>Deadths: <b>" + deaths + "</b></p>" +
-            "<p>Last Updated: <b>" + lastUpdated.toLocaleString() + "</b></p>"
+            "<p>Last Updated: <b>" + lastUpdated + "</b></p>"
     });
     bubble.close();
     ui.addBubble(bubble);
