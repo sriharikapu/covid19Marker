@@ -24,6 +24,7 @@ window.addEventListener('resize', function () {
     map.getViewPort().resize();
 });
 
+
 loadData();
 
 function loadData() {
@@ -40,11 +41,9 @@ function loadData() {
                 let lat = attribute.Lat;
                 let lon = attribute.Long_;
                 let active_cases = attribute.Active;
-                let recovered = attribute.Recovered;
                 let deaths = attribute.Deaths;
                 let estimated_cases = attribute.Estimated;
-                let lastUpdated1 = new Date(attribute.Last_Update);
-                let lastUpdated = lastUpdated1.toLocaleString();
+                let lastUpdated = new Date(attribute.Last_Update);
 
                 let radius = estimated_cases / 10 + 100000;
 
@@ -55,7 +54,7 @@ function loadData() {
 
 }
 
-function addCase(lat, lon, radius, name, active_cases, recovered, deaths, estimated_cases, lastUpdated){
+function addCase(lat, lon, radius, name, active_cases, deaths, estimated_cases, lastUpdated){
 
     let circle = new H.map.Circle(
         { lat: lat, lng: lon},
@@ -74,10 +73,9 @@ function addCase(lat, lon, radius, name, active_cases, recovered, deaths, estima
     let bubble = new H.ui.InfoBubble({lng: lon, lat: lat}, {
         content: "<b>" + name + "</b> " +
             "<p>Active Cases: <b>" + active_cases + "</b></p>" +
-            "<p>Recovered: <b>" + recovered + "</b></p>" +
-            "<p>Estimated: <b>" + estimated_cases + "</b></p>" +
-            "<p>Deadths: <b>" + deaths + "</b></p>" +
-            "<p>Last Updated: <b>" + lastUpdated + "</b></p>"
+            "<p>Estimated Cases: <b>" + estimated_cases + "</b></p>" +
+            "<p>Deaths: <b>" + deaths + "</b></p>" +
+            "<p>Time:  <b>" + lastUpdated.toLocaleString() + "</b></p>"
     });
     bubble.close();
     ui.addBubble(bubble);
