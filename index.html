@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
     <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/sriharikapu/covid19Marker.github.io/master/popup.css" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -27,18 +28,64 @@
                
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down" style="padding-top:1%; padding-right:5%;">
-                <li><a href="sass.html"></a>
-                <div class="center">
-                <input type="checkbox" id="click">
-                <label for="click" class="click-me"> <!-- click here --></label>
-                 <div class="content">
-                 <div class="header">
-                 <label for="click" class="fas fa-times"></label>
-                 </div>     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?embedded=true" width="400" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<style>
+body {
+  background: #f1c40f;
+}
+
+.button {
+  background: #3498db;
+  width: 180px;
+  padding: 4px 0;
   
-                 </div>
-                </div>                       
-                </li>
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+
+  p {
+   	font-family: 'Roboto'; 
+	  text-align: center;
+  	text-transform: uppercase;
+    color: #FFF;
+    user-select: none;
+  }
+  
+  &:hover {
+    cursor: pointer;
+  }
+  
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: darken(#f1c40f, 20%);
+    opacity: 0.4;
+    bottom: -30px;
+  }
+}
+</style>
+<script>
+var $button = document.querySelector('.button');
+$button.addEventListener('click', function() {
+  var duration = 0.3,
+      delay = 0.08;
+  TweenMax.to($button, duration, {scaleY: 1.6, ease: Expo.easeOut});
+  TweenMax.to($button, duration, {scaleX: 1.2, scaleY: 1, ease: Back.easeOut, easeParams: [3], delay: delay});
+  TweenMax.to($button, duration * 1.25, {scaleX: 1, scaleY: 1, ease: Back.easeOut, easeParams: [6], delay: delay * 3 });
+});
+</script>
+<li>
+<div class="button">
+<p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?usp=sf_link">REPORT</a>  
+</p>
+</div>
+</li>
        
               </ul>
             </div>
