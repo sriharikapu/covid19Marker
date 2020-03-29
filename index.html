@@ -1,80 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Covid 19 Marker</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
-    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
-    <link rel="icon" href="https://www.iconpacks.net/icons/2/free-corona-virus-icon-3133-thumb.png" type="image/gif" sizes="16x16">
-    <!--
+  <meta charset="UTF-8">
+  <title>Covid 19 Marker</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+  <link rel="icon" href="https://www.iconpacks.net/icons/2/free-corona-virus-icon-3133-thumb.png" type="image/gif"
+    sizes="16x16">
+  <!--
     <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/sriharikapu/covid19Marker.github.io/master/popup.css" />
     -->
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400" />
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/5d97720e14.js" crossorigin="anonymous"></script>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body style="background-color: #5A5A5A;">
-    <header>
-        <nav style="background-color:#5A5A5A; height:100px;">
-            <div class="nav-wrapper >
-              <a href="#" class="brand-logo"> <img style=" padding-left:5%; height:100px; width=100px;" src="https://github.com/sriharikapu/covid19Marker.github.io/blob/master/icon.png?raw=true" alt="logo of covid19marker" /></a>
-               
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down" style="padding-top:0.1%; padding-right:5%;">
-<li>
-<div class="button">
-<p style="background-color: #46464682;">
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?usp=sf_link">REPORT</a>  
-</p>
-</div>
-</li>
-       
-              </ul>
+  <header>
+    <nav style="background-color:#5A5A5A; height:100px;">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"> <img style=" padding-left:5%; height:100px; width=100px;"
+            src="https://github.com/sriharikapu/covid19Marker.github.io/blob/master/icon.png?raw=true"
+            alt="logo of covid19marker" /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down" style="padding-top:0.1%; padding-right:5%;">
+          <li>
+            <div class="button">
+              <p style="background-color: #46464682;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?usp=sf_link">REPORT</a>
+              </p>
             </div>
-          </nav>
+          </li>
 
-          <!-- Menu mobil -->
-          <ul class="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
-          </ul>
-    </header>
+        </ul>
+      </div>
+    </nav>
 
-    <div id="mapContainer" style="height: 75vh; width: 100%; padding-left: 10%; padding-right: 10%; padding-top: 2%; padding-bottom:2%;">
-    </div>
- <!--   <div id="formContainer" style="height: 70vh; width: 37%; padding-right: 5%; padding-top: 2%; padding-bottom:2%;>
+    <!-- Menu mobil -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?usp=sf_link">REPORT</a></li>
+    </ul>
+  </header>
+
+  <div id="mapContainer"
+    style="height: 75vh; width: 100%; padding-left: 10%; padding-right: 10%; padding-top: 2%; padding-bottom:2%;">
+  </div>
+  <!--   <div id="formContainer" style="height: 70vh; width: 37%; padding-right: 5%; padding-top: 2%; padding-bottom:2%;>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?embedded=true" width="40%" height="500px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>   -->                                                                     
-                                                                            
+    </div>   -->
 
-    <footer class="page-footer" style="position: fixed; background-color:#464646; bottom: 0; width: 100%; padding-top: 0!important;" >
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-                <a href="https://www.un.org/en/coronavirus/wellness" target="_blank">
-                      <img width="130" height="100" border="0" align="center"  src="https://logodix.com/logo/416182.png"/>
-                </a>
-               <!-- <a href="https://www.un.org/en/coronavirus/wellness" target="_blank">
+  <footer class="page-footer"
+    style="position: fixed; background-color:#464646; bottom: 0; width: 100%; padding-top: 0!important;">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <a href="https://www.un.org/en/coronavirus/wellness" target="_blank">
+            <img width="130" height="100" border="0" align="center" src="https://logodix.com/logo/416182.png" />
+          </a>
+          <!-- <a href="https://www.un.org/en/coronavirus/wellness" target="_blank">
                       <img width="220" height="250" border="0" align="center"  src="https://lh3.googleusercontent.com/proxy/dku-PbrnZiEYBf4yeK26LQE3AF258AzshMmkVIUmQfzSIijkxT6Tl_oKc5KyCpvKt0XavQI74o-dYr1208oheEEWq5bL1JGACex089IWV955dd0m_Z3cUn4Tjg"/>
                 </a> -->
-                
-            </div>
-          </div>
-        </div>
 
-      </footer>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey darken-3">
+      <div class="container">
+      © 2020 covid19Marker
+      <div class="right">
+        <a class="grey-text" href="#!"><i class="fab fa-github"></i></a>
+        <a class="grey-text" href="#!"><i class="fab fa-google"></i></a>
+        <a class="grey-text" href="#!"><i class="fas fa-virus"></i></a>
+      </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 <script src="js.js" type="text/javascript" charset="utf-8"></script>
