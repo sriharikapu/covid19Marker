@@ -9,6 +9,7 @@
     <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/sriharikapu/covid19Marker.github.io/master/popup.css" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
     <!-- Compiled and minified CSS -->
@@ -26,10 +27,20 @@
                
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down" style="padding-top:1%; padding-right:5%;">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
+                <li><a href="sass.html">Sass</a>
+                <div class="center">
+                <input type="checkbox" id="click">
+                <label for="click" class="click-me">Click Me</label>
+                 <div class="content">
+                 <div class="header">
+                 <h2>Report new cases</h2>
+                 <label for="click" class="fas fa-times"></label>
+                 </div>     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?embedded=true" width="400" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  
+                 </div>
+                </div>                       
+                </li>
+       
               </ul>
             </div>
           </nav>
