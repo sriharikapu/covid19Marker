@@ -78,6 +78,273 @@
                     <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?usp=sf_link">Report <i class="far fa-plus-square"></i></a></p>
                 </div>
             </div>
+      </div>
+    </nav>
+
+    <!-- Menu mobil -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="about.html">About</a></li>
+      <li><a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdjXp66KGIWapXWfDeQn0rVBpOuCWjhmkIy7aGrWKc0UkvI3Q/viewform?usp=sf_link">REPORT</a>
+      </li>
+    </ul>
+  </header>
+
+  <div 
+    style="height: 80vh; width: 100%; padding-left: 10%; padding-right: 10%; padding-top: 2%; padding-bottom:2%;">
+  <style>
+  // @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+*{
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+  "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+}
+
+$primary-back-color: #333750;
+$primary-text-color: #fff;
+$gutter-horizontal: 1px;
+
+.whole-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: $primary-text-color;
+}
+
+.profile-wrap{
+  padding: 20px;
+  background-color: $primary-back-color;
+  width: 350px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+.profile-right-icons{
+  float: right;
+}
+
+.profile-img-wrap{
+  position: relative;
+  width: 120px;
+  margin: 0 auto;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 0px;
+    right: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(120deg, #8b62cc,#e256af);
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    height: 14px;
+    width: 6px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    bottom: 8px;
+    right: 20px;
+  }
+}
+
+.profile-img-wrap img{
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,.5);
+  border-radius: 50%;
+  width: 100%;
+  object-fit: cover;
+  height: 120px;
+}
+
+.profile-text-block{
+  text-align: center;
+}
+.profile-primary-head {
+  margin-top: 10px;
+  h2{
+      font-size: 42px;
+      font-weight: 400;
+  }
+  p{
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight:700;
+      color: rgba($primary-text-color, .4);
+    }
+ }
+
+.profile-sub-head{
+  font-size: 12px;
+  margin: 10px 0 20px;
+  padding: 0 90px;
+  color: rgba($primary-text-color, .8);
+}
+
+.hire-btn{
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 0;
+  background-image: linear-gradient(120deg, #8b62cc, #e256af);
+  font-size: 16px;
+  min-width: 100px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,.4);
+  color: $primary-text-color;
+}
+
+.profile-social-wrap{
+  margin-top: 8%;
+  border-top: 1.5px solid rgba($primary-text-color,.2);
+  padding: 0 2%;
+}
+
+.row{
+  width: 100%;
+  margin-top: 8%;
+  
+  &::after{
+    content:'';
+    display: block;
+    clear: both;
+  }
+  [class^="col-"]{
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    float: left;
+    text-align: center;
+    
+    & span{
+      display: inline-block;
+      padding: 9% 15%;
+      border: 1px solid transparent;
+      text-align: center;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px -4px rgba(0,0,0,.5);
+      padding-top: 13%;
+    }
+    
+    & label{
+      margin-top: 10%;
+      display: block;
+      margin-bottom: 2%;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+    & p{
+      font-size: 10px;
+      color: rgba($primary-text-color, .6);
+    }
+     
+    &:not(:last-child){
+      margin-right: $gutter-horizontal;
+    }
+  }
+}
+
+
+</style>     
+  <div class="whole-wrap">
+  <div class="profile-wrap">
+    <div class="profile-head">
+     
+      <span class="profile-right-icons">
+        <span class="profile-heart-icon">
+          <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+</svg>
+        </span>
+        <span class="profile-menu-icon">
+          <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" />
+</svg>
+        </span>
+      </span>
+    </div>
+    
+    <div class="profile-img-wrap">
+      <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEeYjbDFlRW0A/profile-displayphoto-shrink_800_800/0?e=1591228800&v=beta&t=xyoNEjsWDLprtum9VqdWLaep-pHlattiRk3DAh_R73s" alt="profile image">
+    </div>
+    
+    <div class="profile-text-block">
+      <div class="profile-primary-head">
+        <h2>Antonio Mena</h2>
+        <p>UI Developer </p>
+      </div>
+      <div class="profile-sub-head">
+        <p>Front end expert and open source enthusiast</p>
+      </div>
+      <div class="profile-hire-block">
+        <a href="https://devpost.com/jantoniomenad" class="hire-btn" target="_blank">DEVPOST</a>
+      </div>
+    </div>
+    
+    <div class="profile-social-wrap">
+      </div>
+    </div>
+    
+  </div>
+    
+      <div class="whole-wrap">
+  <div class="profile-wrap">
+    <div class="profile-head">
+
+      <span class="profile-right-icons">
+        <span class="profile-heart-icon">
+          <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+</svg>
+        </span>
+        <span class="profile-menu-icon">
+          <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" />
+</svg>
+        </span>
+      </span>
+    </div>
+    
+    <div class="profile-img-wrap">
+      <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/000/735/445/datas/profile.jpg" alt="profile image">
+    </div>
+    
+    <div class="profile-text-block">
+      <div class="profile-primary-head">
+        <h2>Srihari Kapu</h2>
+        <p>Technical Lead</p>
+      </div>
+      <div class="profile-sub-head">
+        <p>Development lead and co creator with immense passion for blockchain</p>
+      </div>
+      <div class="profile-hire-block">
+        <a href="https://devpost.com/sriharikapu" class="hire-btn" target="_blank">DEVPOST</a>
+      </div>
+    </div>
+    
+    <div class="profile-social-wrap">
+      </div>
+    </div>
+    
+  </div>
+</div>
+  
+
+    
+    
+</div>
+  
+  </div>
+
+  <footer class="page-footer" style="background-color:#464646; bottom: 0; width: 100%; ">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+
         </div>
         <div class="footer-copyright grey darken-3">
             <div class="container">
