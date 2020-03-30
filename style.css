@@ -1,15 +1,38 @@
 /* * * * * * * * * * Footer * *  * * * * * * */
+footer .container .row .col p a{
+  color: white!important;
+}
+
+footer .container .row .col p a:hover{
+  text-decoration: underline;
+}
+
+footer .container .row .col h5 b i{
+  font-size: 30px;
+  padding: 10px;
+}
+
+footer .container .row .col p i{
+  font-size: 20px;
+  padding: 5px;
+}
+
+
 .footer-copyright .container .right a i{
-    font-size: 22px;
+    font-size: 25px;
     padding: 2px 5px;
 }
 
-.nav-wrapper ul li p a i{
-  padding: 3px 10px;
-
+.footer-copyright .container .right a i:hover{
+  color: rgb(92, 91, 91);
 }
 
 #footer{
   position: fixed;
 }
   
+/* * * * * * * * * * Navbar * *  * * * * * * */
+.nav-wrapper ul li p a i{
+  padding: 3px 10px;
+
+}
