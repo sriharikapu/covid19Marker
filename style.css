@@ -2,5 +2,10 @@
 .footer-copyright .container .right a i{
     font-size: 22px;
     padding: 2px 5px;
-  }
+}
+
+.nav-wrapper ul li p a i{
+  padding: 3px 10px;
+
+}
   
